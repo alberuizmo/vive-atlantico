@@ -1,0 +1,1 @@
+gcloud app deploy C:/Users/HP/Documents/proyectosFront/JorgeAngarita/vive-atlantico/app.yaml --project=enduring-brace-329822 --version=viveatlantico --no-promote

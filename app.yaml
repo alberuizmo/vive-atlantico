@@ -1,0 +1,18 @@
+runtime:
+  nodejs16
+
+  # Serve all static files with urls ending with a file extension
+handlers:
+  - url: /(.*\.js)
+    mime_type: text/javascript
+    static_files: dist/\1
+    upload: dist/(.*\.js)
+  - url: /(.*\..+)$
+    secure: always
+    static_files: dist/\1
+    upload: dist/(.*\..+)$
+    # catch all handler to index.html
+  - url: /.*
+    secure: always
+    static_files: dist/index.html
+    upload: dist/index.html
